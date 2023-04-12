@@ -4,20 +4,8 @@ pipeline{
     stage('Build'){
       steps{
               echo'building'
-              sh 'make build'
+              sh 'mvn clean install'
            }
       }
-      stage('Test'){
-      steps{
-              echo'testing'
-              sh 'make test'
-           }
-      }
-       stage('Deploy'){
-      steps{
-              echo'deploying'
-              sh 'make deploy'
-           }
-      }
-     }
    }
+}
